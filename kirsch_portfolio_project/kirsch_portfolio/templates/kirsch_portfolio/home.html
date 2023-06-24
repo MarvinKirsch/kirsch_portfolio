@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    {% load static %}
+    <link href="{% static 'kirsch_portfolio/stylesheet.css' %}" rel="stylesheet">
+
+<title>My Portfolio</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark">
+      <a class="navbar-brand" href="#">My Portfolio</a>
+    </nav>
+
+    <div class="container mt-5">
+      <!-- Introduction -->
+      <section id="introduction">
+        <h1 class="highlight">Hello, I'm Marvin Kirsch</h1>
+        <p>I am a Machine Learning and AI Bachelor student at ELU</p>
+      </section>
+
+      <!-- Experience -->
+      <section id="experience" class="mt-5">
+        <h2 class="highlight">Experience</h2>
+        <!-- List your work experience here... -->
+      </section>
+    </div>
+    <div class="container mt-5">
+        <div class="row">
+            <!-- First Projects Section -->
+            <div class="col">
+                <section id="projects">
+                    <h2 class="highlight">Projects</h2>
+                    <!-- Showcase your projects here... -->
+                    <h3 class="highlight">This Portfolio</h3>
+                </section>
+            </div>
+
+            <!-- Second Projects Section -->
+            <div class="col">
+                <section id="more-projects">
+                    <h2 class="highlight">More Projects</h2>
+                    <!-- Showcase your projects here... -->
+                    <h3 class="highlight">python_scripts</h3>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
+    <script src="{% static 'kirsch_portfolio/background.js' %}"></script>
+
+  </body>
+</html>
+
