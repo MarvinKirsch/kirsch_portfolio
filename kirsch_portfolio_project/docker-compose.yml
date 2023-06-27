@@ -26,5 +26,16 @@ services:
       - DB_USER=kirsch
       - DB_PASSWORD=nivrik@30111994
 
+  frontend:
+    container_name: react_container
+    build: ./frontend  # specify the path to your React app here
+    volumes:
+      - ./frontend:/app  # specify the path to your React app here
+    ports:
+      - "3000:3000"
+    command: npm start
+    environment:
+      - CHOKIDAR_USEPOLLING=true # this is for hot-reloading to work
+
 volumes:
   postgres_data:
