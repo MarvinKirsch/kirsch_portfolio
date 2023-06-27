@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',  # new
+    'corsheaders',  # new
     'kirsch_portfolio',
 ]
 
@@ -49,7 +51,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',  # new
 ]
+
+CORS_ALLOW_ALL_ORIGINS = True  # new
 
 ROOT_URLCONF = 'kirsch_portfolio_project.urls'
 
