@@ -9,6 +9,9 @@ COPY package*.json ./
 
 # Install the app dependencies
 RUN npm install
+RUN npm install p5
+# RUN npm install bootstrap
+# RUN npm install react-router-dom
 
 # Copy the rest of the app source code
 COPY . .

@@ -4,12 +4,17 @@ const Projects = () => {
     const [projects, setProjects] = useState([]);
 
     useEffect(() => {
-        // Replace the URL with the actual URL where your Django app is running.
-        // Here, 'projects' is the endpoint that you defined in your Django app.
-        fetch('http://localhost:8000/projects')
-            .then(response => response.json())
-            .then(data => setProjects(data));
+        fetch('http://localhost:8000/projects/')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => setProjects(data))
+            .catch(error => console.error('There has been a problem with your fetch operation:', error));
     }, []);
+    
 
     return (
         <div>
